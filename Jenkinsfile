@@ -2,7 +2,7 @@ pipeline {
     agent none
 
     environment {
-        DOCKERHUB_USER = 'shivkumar1993docker'
+        DOCKERHUB_USER = 'shaikhirfan82'
         IMAGE_NAME = 'flask-app'
         DOCKERHUB_PASS = credentials('dockerhub-pass')
     }
@@ -13,7 +13,7 @@ pipeline {
             agent { label 'built-in' }
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/shivmatkawala/flask-dind-project.git'
+                    url: 'https://github.com/shaikhirfan82/flask-again.git'
                 
                 stash name: 'source_code', includes: '**'
             }
